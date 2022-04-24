@@ -1,6 +1,7 @@
 # eRaffle - Near Protocol
 Buy a Ticket. Join the Raffle and WIN!
 Written in Assemblyscript and used Singleton Pattern for being Near Certified Developer! 
+https://www.loom.com/share/6e9b96c17f47414e8dfd9d4aa336bebc
 
 # Roles
 ## Admin Usage
