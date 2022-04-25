@@ -7,8 +7,8 @@ import { Raffle, Ticket } from "./model";
 export class Contract {
 
   /****************Storage,Persistent Collections Usage******************/
-  private raffles: PersistentVector<Raffle> = new PersistentVector<Raffle>('ppa');
-  private tickets: PersistentVector<Ticket> = new PersistentVector<Ticket>('aap');
+  private raffles: PersistentVector<Raffle> = new PersistentVector<Raffle>('r');
+  private tickets: PersistentVector<Ticket> = new PersistentVector<Ticket>('t');
 
   @mutateState()
   init(): void {
@@ -197,7 +197,7 @@ export class Contract {
     assert(context.attachedDeposit >= price, `attachedDeposit:${context.attachedDeposit}, price:${price} Please send enough NEAR!`)
   }
 
-  assert_max_tickets(raffleId: i32): void {
+  private assert_max_tickets(raffleId: i32): void {
     let count = 0;
     for (let i = 0; i < this.tickets.length; i++) {
       const entry = this.tickets[i];
